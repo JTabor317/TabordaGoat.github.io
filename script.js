@@ -21,6 +21,7 @@ if (year) {
 if (lightbox) {
   lightbox.hidden = true;
   lightbox.setAttribute("aria-hidden", "true");
+  lightbox.style.display = "none";
 }
 
 copyButtons.forEach((button) => {
@@ -90,6 +91,7 @@ function openLightbox(galleryItems, index, trigger) {
   updateLightbox();
   lightbox.hidden = false;
   lightbox.setAttribute("aria-hidden", "false");
+  lightbox.style.display = "grid";
   document.body.classList.add("lightbox-open");
 
   if (lightboxClose) {
@@ -104,6 +106,7 @@ function closeLightbox() {
 
   lightbox.hidden = true;
   lightbox.setAttribute("aria-hidden", "true");
+  lightbox.style.display = "none";
   document.body.classList.remove("lightbox-open");
   activeGallery = [];
   activeIndex = 0;
