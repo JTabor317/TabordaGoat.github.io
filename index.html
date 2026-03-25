@@ -84,24 +84,29 @@
             <div class="project-showcase">
               <div class="project-gallery">
                 <figure class="media-card media-featured">
-                  <img src="assets/windowedss.png" alt="In-game screen shot of a puzzle">
+                  <button class="media-trigger" type="button" aria-label="Open Windowed screenshot">
+                    <img src="assets/windowedss.png" alt="In-game screen shot of a puzzle">
+                  </button>
                   <figcaption>In-game screen shot of one of the puzzles.</figcaption>
                 </figure>
                 <figure class="media-card">
-                  <img src="assets/windowedlevel1.png" alt="Full level 1">
+                  <button class="media-trigger" type="button" aria-label="Open Windowed level layout">
+                    <img src="assets/windowedlevel1.png" alt="Full level 1">
+                  </button>
                   <figcaption>Full level 1 layout.</figcaption>
                 </figure>
               </div>
+            </div>
 
-              <section class="code-snippet" aria-label="Windowed code sample">
-                <div class="snippet-header">
-                  <div>
-                    <p class="snippet-label">C# movement snippet</p>
-                    <p class="snippet-caption">A short sample is enough to show style and clarity.</p>
-                  </div>
-                  <button class="copy-snippet" type="button">Copy</button>
+            <section class="code-snippet project-code" aria-label="Windowed code sample">
+              <div class="snippet-header">
+                <div>
+                  <p class="snippet-label">C# grid-based movement snippet</p>
+                  <p class="snippet-caption">The main function used to move the character and push blocks</p>
                 </div>
-                <pre><code>public void TryStep(Vector2 inputDir)
+                <button class="copy-snippet" type="button">Copy</button>
+              </div>
+              <pre><code>public void TryStep(Vector2 inputDir)
 {
     if (isMoving || mytilemap == null)
         return;
@@ -167,8 +172,7 @@
         }
     }
 }</code></pre>
-              </section>
-            </div>
+            </section>
           </article>
 
           <article class="project-card">
@@ -197,21 +201,24 @@
             <div class="project-showcase">
               <div class="project-gallery">
                 <figure class="media-card media-featured">
-                  <img src="assets/last-call-at-dawn.svg"
-                    alt="Stylized placeholder art for the Last Call at Dawn project">
+                  <button class="media-trigger" type="button" aria-label="Open Last Call at Dawn artwork">
+                    <img src="assets/last-call-at-dawn.svg"
+                      alt="Stylized placeholder art for the Last Call at Dawn project">
+                  </button>
                   <figcaption>Swap this with a scene still, dialogue screenshot, or trailer frame.</figcaption>
                 </figure>
               </div>
+            </div>
 
-              <section class="code-snippet" aria-label="Last Call at Dawn code sample">
-                <div class="snippet-header">
-                  <div>
-                    <p class="snippet-label">Dialogue branching logic</p>
-                    <p class="snippet-caption">Short snippets work best when they reveal one clear idea.</p>
-                  </div>
-                  <button class="copy-snippet" type="button">Copy</button>
+            <section class="code-snippet project-code" aria-label="Last Call at Dawn code sample">
+              <div class="snippet-header">
+                <div>
+                  <p class="snippet-label">Dialogue branching logic</p>
+                  <p class="snippet-caption">Short snippets work best when they reveal one clear idea.</p>
                 </div>
-                <pre><code>public DialogueNode GetNextNode(DialogueChoice choice)
+                <button class="copy-snippet" type="button">Copy</button>
+              </div>
+              <pre><code>public DialogueNode GetNextNode(DialogueChoice choice)
 {
     if (!choice.RequirementsMet(playerFlags))
     {
@@ -221,8 +228,7 @@
     visitedChoices.Add(choice.Id);
     return nodeLookup[choice.NextNodeId];
 }</code></pre>
-              </section>
-            </div>
+            </section>
           </article>
 
           <article class="project-card">
@@ -250,21 +256,24 @@
             <div class="project-showcase">
               <div class="project-gallery">
                 <figure class="media-card media-featured">
-                  <img src="assets/ritual-workshop.svg"
-                    alt="Stylized placeholder art for the Ritual Workshop project">
+                  <button class="media-trigger" type="button" aria-label="Open Ritual Workshop artwork">
+                    <img src="assets/ritual-workshop.svg"
+                      alt="Stylized placeholder art for the Ritual Workshop project">
+                  </button>
                   <figcaption>Tool screenshots help communicate process and problem solving.</figcaption>
                 </figure>
               </div>
+            </div>
 
-              <section class="code-snippet" aria-label="Ritual Workshop code sample">
-                <div class="snippet-header">
-                  <div>
-                    <p class="snippet-label">Validation helper</p>
-                    <p class="snippet-caption">Use this area for editor scripts, shaders, or gameplay code.</p>
-                  </div>
-                  <button class="copy-snippet" type="button">Copy</button>
+            <section class="code-snippet project-code" aria-label="Ritual Workshop code sample">
+              <div class="snippet-header">
+                <div>
+                  <p class="snippet-label">Validation helper</p>
+                  <p class="snippet-caption">Use this area for editor scripts, shaders, or gameplay code.</p>
                 </div>
-                <pre><code>public static IEnumerable&lt;string&gt; ValidateEncounter(EncounterData data)
+                <button class="copy-snippet" type="button">Copy</button>
+              </div>
+              <pre><code>public static IEnumerable&lt;string&gt; ValidateEncounter(EncounterData data)
 {
     if (data.SpawnPoints.Count == 0)
     {
@@ -276,8 +285,7 @@
         yield return "Each wave needs at least one enemy entry.";
     }
 }</code></pre>
-              </section>
-            </div>
+            </section>
           </article>
         </div>
       </section>
@@ -329,6 +337,20 @@
       <p>Built for GitHub Pages.</p>
       <p>&copy; <span id="year">2026</span> TabordaGoat</p>
     </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Project image viewer">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">Close</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">Prev</button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="">
+        <figcaption class="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">Next</button>
+      <p class="lightbox-counter" aria-live="polite"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
