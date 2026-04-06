@@ -318,80 +318,51 @@
             <div class="project-top">
               <div class="project-copy">
                 <div class="project-meta">
-                  <span class="pill">Editor Tooling</span>
-                  <span class="project-status">Pipeline Support</span>
+                  <span class="pill">Blender</span>
+                  <span class="project-status">Game Studio Project (WIP)</span>
                 </div>
-                <h3>Ritual Workshop</h3>
+                <h3>Window Pains</h3>
                 <p class="project-lead">
-                  An internal Unity tool for assembling encounters faster, validating data, and reducing
-                  repetitive setup during iteration.
+                  A party game with an objective on cleaning a skyscraper under a time limit and without falling off. 
                 </p>
                 <p>
-                  Including tools in your portfolio is valuable. It shows engineering judgment, iteration
-                  habits, and an ability to improve team velocity instead of only shipping player-facing work.
+                  For our game studio class we partnered up with 5 other people and were tasked with making a game demo by the end of the semester. To meet 
+                  the team's needs I had to take a step out of my comfort zone and be the team's main 3D modeler. I had very limited expeirence at the time of starting the project
+                  but I was not discouraged. My team was all on the same page and many of us wanted to take this project a step further and end up publishing our game at a later date.
+                  Being still new to modeling, it took quite a while before I was able to get the skyscraper (our main asset) looking how I wanted. As I slowly got the feel for Blender,
+                  my times between model shortened and the quality of work increased. The main challenge so far in the project was finding a balanced workflow with experimenting with the software
+                  and also creating assets my team could use. Many of the current assets had multiple iterations for a variety of reasons including, optimization, user feedback, or style alignment. 
+                  I'll continuing updating this as the semester progresses and the project evolves but for now I'll showcase some screenshots of the model in blender and in engine.
                 </p>
                 <ul class="tag-list" aria-label="Project skills">
-                  <li>Custom Inspectors</li>
-                  <li>Workflow Automation</li>
-                  <li>Content Validation</li>
+                  <li>3D modeling</li>
+                  <li>Blender to Unity Workflow</li>
+                  <li>Prefab Construction</li>
                 </ul>
               </div>
 
               <div class="project-showcase">
                 <div class="project-gallery">
                   <figure class="media-card media-featured">
-                    <a class="media-trigger" href="assets/ritual-workshop.svg" aria-label="Open Ritual Workshop artwork">
-                      <img src="assets/ritual-workshop.svg"
-                        alt="Stylized placeholder art for the Ritual Workshop project">
+                    <a class="media-trigger" href="assets/building mock.png" aria-label="Early Building Mock">
+                      <img src="assets/building mock.png"
+                        alt="Early Building Mock">
                     </a>
-                    <figcaption>Tool screenshots help communicate process and problem solving.</figcaption>
+                    <figcaption>Early building mock I made in the first few weeks.</figcaption>
                   </figure>
+
+                  <figure class="media-card media-featured">
+                    <a class="media-trigger" href="assets/Comic_Building_Style.png" aria-label="Updated Style">
+                      <img src="assets/Comic_Building_Style.png"
+                        alt="Updated Style">
+                    </a>
+                    <figcaption>The current style and model of the building with shaders.</figcaption>
+                  </figure>
+
                 </div>
               </div>
             </div>
 
-            <section class="code-snippet project-code" aria-label="Ritual Workshop code sample">
-              <div class="snippet-header">
-                <div>
-                  <p class="snippet-label">Validation helper</p>
-                  <p class="snippet-caption">Use this area for editor scripts, shaders, or gameplay code.</p>
-                </div>
-                <button class="copy-snippet" type="button">Copy</button>
-              </div>
-              <pre><code>public static IEnumerable&lt;string&gt; ValidateEncounter(EncounterData data)
-{
-    if (data.SpawnPoints.Count == 0)
-    {
-        yield return "Encounter needs at least one spawn point.";
-    }
-
-    if (data.Waves.Any(wave =&gt; wave.Enemies.Count == 0))
-    {
-        yield return "Each wave needs at least one enemy entry.";
-    }
-}</code></pre>
-            </section>
-
-            <section class="project-video" aria-label="Ritual Workshop video demo">
-              <div class="video-header">
-                <div>
-                  <p class="video-label">Video Demo</p>
-                  <p class="video-caption">A short tool walkthrough or timelapse works well here.</p>
-                </div>
-              </div>
-              <div class="video-frame">
-                <iframe
-                  title="Ritual Workshop video demo"
-                  loading="lazy"
-                  allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  srcdoc="<!DOCTYPE html><html lang='en'><body style='margin:0;display:grid;place-items:center;min-height:100vh;background:#11202a;color:#f7efe4;font-family:Trebuchet MS,Segoe UI,sans-serif;'><div style='text-align:center;padding:2rem;line-height:1.6;'><strong style='display:block;font-size:1.2rem;margin-bottom:0.75rem;'>Video Embed Placeholder</strong><span>Replace this iframe with your project video embed URL.</span></div></body></html>"
-                ></iframe>
-              </div>
-            </section>
-          </article>
-        </div>
-      </section>
 
       <section class="section" id="about">
         <div class="section-heading">
